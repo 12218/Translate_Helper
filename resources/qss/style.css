@@ -1,0 +1,35 @@
+* {
+    font-family: "SimHei";
+}
+
+QPushButton[name='translate_button']{
+    font-size: 16px;
+    font-family: "SimHei";
+    border-radius: 5px;
+    height: 30px;
+    border: 2px solid red;
+    width: 70px;
+}
+
+QPushButton[name='ontop_button']{
+    font-size: 16px;
+    font-family: "SimHei";
+    border-radius: 5px;
+    height: 30px;
+    border: 2px solid rgb(56, 73, 221);
+    width: 70px;
+}
+
+QPushButton[name='translate_button']:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(195, 226, 57);
+}
+
+QPushButton[name='ontop_button']:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(226, 201, 57);
+}
+
+QTextEdit {
+    font-size: 15px;
+}
