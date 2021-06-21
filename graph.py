@@ -35,17 +35,24 @@ class tranHelper(QWidget):
         self.text1.setPlaceholderText('输入原文...')
         self.text2 = QTextEdit()
         self.text2.setPlaceholderText('翻译后的文章...')
+        self.clear_button = QPushButton('清空')
         self.translate_button = QPushButton('翻译')
         self.ontop_button = QPushButton('置顶')
 
+        self.clear_button.setProperty('name', 'clear_button')
         self.translate_button.setProperty('name', 'translate_button')
         self.ontop_button.setProperty('name', 'ontop_button')
+
+        # set tip
+        self.clear_button.setToolTip('清空快捷键Alt+C')
+        self.translate_button.setToolTip('翻译快捷键Alt+T')
 
         # add layout
         self.tran_h_layout.addWidget(self.text1)
         self.tran_h_layout.addWidget(self.text2)
-        self.tran_v_layout.addStretch(4)
         self.tran_v_layout.addWidget(self.translate_button)
+        self.tran_v_layout.addWidget(self.clear_button)
+        self.tran_v_layout.addStretch(4)
         self.tran_v_layout.addWidget(self.ontop_button)
         self.tran_h_layout.addLayout(self.tran_v_layout)
         self.tran_layout.addLayout(self.tran_h_layout)
@@ -86,7 +93,12 @@ class tranHelper(QWidget):
 
         # button function
         self.translate_button.clicked.connect(self.translate_function)
+        self.clear_button.clicked.connect(self.clear_function)
         self.ontop_button.clicked.connect(self.ontop_function)
+
+        # set shortcut
+        self.translate_button.setShortcut('Alt+T')
+        self.clear_button.setShortcut('Alt+C')
 
         self.setStyleSheet(self.style)
 
@@ -119,6 +131,11 @@ class tranHelper(QWidget):
         except:
             self.info('replace命令出错')
             return ('replace命令出错')
+
+    # clear function
+    def clear_function(self):
+        self.text1.setText('')
+        self.text2.setText('')
 
     # translate function
     def translate_function(self):

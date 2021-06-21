@@ -2,6 +2,15 @@
     font-family: "SimHei";
 }
 
+QPushButton[name='clear_button']{
+    font-size: 16px;
+    font-family: "SimHei";
+    border-radius: 5px;
+    height: 30px;
+    border: 2px solid rgb(52, 202, 26);
+    width: 70px;
+}
+
 QPushButton[name='translate_button']{
     font-size: 16px;
     font-family: "SimHei";
@@ -18,6 +27,11 @@ QPushButton[name='ontop_button']{
     height: 30px;
     border: 2px solid rgb(56, 73, 221);
     width: 70px;
+}
+
+QPushButton[name='clear_button']:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(80, 128, 233);
 }
 
 QPushButton[name='translate_button']:hover{
