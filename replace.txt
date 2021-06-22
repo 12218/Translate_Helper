@@ -1,1 +1,3 @@
 replace('\n', ' ')
+replace('д', 'g')
+replace(' . . . ', '……')

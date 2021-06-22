@@ -106,7 +106,7 @@ class tranHelper(QWidget):
 
     def read_replace_text(self):
         try:
-            with open('./replace.txt', 'r') as file:
+            with open('./replace.txt', 'r', encoding = 'UTF-8') as file:
                 text = file.read()
             
             self.replace_text.setText(text)
