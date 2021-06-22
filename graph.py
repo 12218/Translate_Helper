@@ -1,3 +1,4 @@
+# encoding:utf-8
 from os import replace
 from PyQt5.QtWidgets import QWidget, QPushButton, QLabel, QTabWidget, QApplication, QHBoxLayout, QTextEdit, QToolButton, QMessageBox, QVBoxLayout, QLineEdit, QMenu, QAction
 from PyQt5.Qt import QIcon
